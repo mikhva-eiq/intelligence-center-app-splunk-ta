@@ -182,7 +182,6 @@ Optional settings:
 | Send the following sightings types | When the `eiq_send_sightings.py` data input script is enabled and an alert from `eiq_alerts` is triggered, only events containing IoCs of these types are sent to EclecticIQ Intelligence Center as sighting entities.
 | Scripts Log Level | Log verbosity for logs collected for this app. See [Access the logs](#access-the-logs). |
 
-<!--
 ## Objects added
 
 | Object | type |
@@ -221,7 +220,6 @@ Optional settings:
 | home | views | 
 | lookup_observables | views | 
 | setup_view_dashboard | views | 
--->
 
 ## Enable input scripts
 
@@ -239,7 +237,6 @@ Splunk runs them.
 | `eiq_collect_feeds.py` | `*/20 * * * *` | Collects data from EclecticIQ Intelligence Center. See [Ingest observables into Splunk](#ingest-observables-into-splunk)
 | `eiq_send_sightings.py` | `*/15 * * * *` | Automatically sends alerts created by the EclecticIQ Intelligence Center App for Splunk to EclecticIQ Intelligence Center as Sighting entities.
 | `eiq_setup_handler.py` | None | Not used. Only for initializing the app.
-
 
 > 📘 **NOTE:**
 > To change the **Interval** of a script,

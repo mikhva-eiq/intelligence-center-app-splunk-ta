@@ -141,9 +141,9 @@ def update_state_meta_kv(id, state, field):
 
 
 def format_to_kv(data_to_add, field_name, value):
-    if re.match("\w+\.", field_name):
-        path = re.search("\w+\.", field_name).group(0)[:-1]
-        new_field_name = re.sub("\w+\.", "", field_name) + "_eiq"
+    if re.match(r"\w+\.", field_name):
+        path = re.search(r"\w+\.", field_name).group(0)[:-1]
+        new_field_name = re.sub(r"\w+\.", "", field_name) + "_eiq"
 
         try:
             data_to_add[path][new_field_name] = value
@@ -151,8 +151,6 @@ def format_to_kv(data_to_add, field_name, value):
             data_to_add[path] = {new_field_name: value}
     else:
         data_to_add[field_name + "_eiq"] = value
-
-    return data_to_add
 
 
 def check_state_from_meta_kv(feed_id):
