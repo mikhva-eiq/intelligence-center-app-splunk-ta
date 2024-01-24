@@ -182,6 +182,45 @@ Optional settings:
 | Send the following sightings types | When the `eiq_send_sightings.py` data input script is enabled and an alert from `eiq_alerts` is triggered, only events containing IoCs of these types are sent to EclecticIQ Intelligence Center as sighting entities.
 | Scripts Log Level | Log verbosity for logs collected for this app. See [Access the logs](#access-the-logs). |
 
+## Objects added
+
+| Object | type |
+| - | - |
+| Create sighting | workflow-actions | 
+| EclecticIQ alert | savedsearch | 
+| EclecticIQ tstats Threat Intelligence alert - Domain | savedsearch | 
+| EclecticIQ tstats Threat Intelligence alert - Email | savedsearch | 
+| EclecticIQ tstats Threat Intelligence alert - Hash | savedsearch | 
+| EclecticIQ tstats Threat Intelligence alert - Source/Destination | savedsearch | 
+| EclecticIQ tstats Threat Intelligence alert - URL | savedsearch | 
+| EclecticIQ_entity_lookup | workflow-actions | 
+| Lookup observable | workflow-actions | 
+| create_eclecticiq_sighting | modalerts | 
+| create_sighting_dashboard | views | 
+| default | nav | 
+| eiq_alerts | collections-conf | 
+| eiq_alerts_list | transforms-lookup | 
+| eiq_app_logs | views | 
+| eiq_db_info | views | 
+| eiq_dm_alert_domain | macros | 
+| eiq_dm_alert_email | macros | 
+| eiq_dm_alert_hash | macros | 
+| eiq_dm_alert_src_dst | macros | 
+| eiq_dm_alert_url | macros | 
+| eiq_feeds_list | collections-conf | 
+| eiq_feeds_list | transforms-lookup | 
+| eiq_ioc_list | transforms-lookup | 
+| eiq_ioc_list | collections-conf | 
+| eiq_matches | views | 
+| eiq_matches_by_domain | views | 
+| eiq_matches_by_email | views | 
+| eiq_matches_by_filehashes | views | 
+| eiq_matches_by_ip | views | 
+| eiq_sightings_search | macros | 
+| home | views | 
+| lookup_observables | views | 
+| setup_view_dashboard | views | 
+
 ## Enable input scripts
 
 This app provides the following scripts for data input.
@@ -198,7 +237,6 @@ Splunk runs them.
 | `eiq_collect_feeds.py` | `*/20 * * * *` | Collects data from EclecticIQ Intelligence Center. See [Ingest observables into Splunk](#ingest-observables-into-splunk)
 | `eiq_send_sightings.py` | `*/15 * * * *` | Automatically sends alerts created by the EclecticIQ Intelligence Center App for Splunk to EclecticIQ Intelligence Center as Sighting entities.
 | `eiq_setup_handler.py` | None | Not used. Only for initializing the app.
-
 
 > 📘 **NOTE:**
 > To change the **Interval** of a script,
